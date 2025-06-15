@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@georgedoescode/spline": "^1.0.1",
+    "@radix-ui/react-toast": "^1.2.14",
     "@svgdotjs/svg.js": "^3.2.4",
     "@tailwindcss/vite": "^4.0.14",
+    "install": "^0.13.0",
+    "npm": "^10.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
