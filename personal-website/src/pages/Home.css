@@ -1,0 +1,134 @@
+.texture-div {
+    background-color: transparent; /* Allow image to show through holes */
+    position: relative;
+    height: 100%; /* Full height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .blob-mask {
+    display: block;
+    width: 100%;
+    height: 100%; /* Full height of parent */
+  }
+  
+  /* Style and animate blob holes */
+
+  
+  /* SVG filter for organic blob shapes */
+  .blob-mask defs::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: block;
+  }
+  
+  /* Define distortion filter */
+  
+  /* Vary animations for each blob */
+
+  
+  .blob-wrapper {
+    animation: move-right s infinite linear;
+  }
+  
+  .blob {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: moveAndGrow infinite linear;
+  }
+  
+  @keyframes moveAndGrow {
+    0% {
+      transform: translateX(0px) scale(0);
+    }
+    100% {
+      transform: translateX(400px) scale(20);
+    }
+  }
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 200px; /* Width of one item */
+  height: 600px; /* Adjust as needed */
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+
+  /* Flexbox to center content */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+
+  /* Optional vertical fade effect */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+
+@keyframes scrollUp {
+  to {
+    top: -200px;
+  }
+}
+
+.item {
+  width: 300px; /* Adjust item width */
+  height: 100px; /* Adjust item height */
+  border-radius: 6px;
+  position: absolute;
+  top: max(calc(200px * 8), 100%);
+  
+  /* Rotate items to face right */
+  transform: rotate(90deg);
+  transform-origin: center; /* Ensure rotation origin is correct */
+  
+  animation-name: scrollUp;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Apply scaleY for vertical stretching */
+  transform: rotate(90deg) scaleY(3) scaleX(2); /* Stretch text vertically without affecting rotation */
+}
+
+
+/* Delay each item to stagger the loop */
+.item1 { animation-delay: calc(40s / 8 * (8 - 1) * -2); }
+.item2 { animation-delay: calc(40s / 8 * (8 - 2) * -2); }
+.item3 { animation-delay: calc(40s / 8 * (8 - 3) * -2); }
+.item4 { animation-delay: calc(40s / 8 * (8 - 4) * -2); }
+.item5 { animation-delay: calc(40s / 8 * (8 - 5) * -2); }
+.item6 { animation-delay: calc(40s / 8 * (8 - 6) * -2); }
+.item7 { animation-delay: calc(40s / 8 * (8 - 7) * -2); }
+.item8 { animation-delay: calc(40s / 8 * (8 - 8) * -2); }
+
+  
+  
