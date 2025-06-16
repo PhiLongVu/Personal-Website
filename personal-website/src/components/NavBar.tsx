@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom";
 import ThemeToggler from "./ThemeToggler";
 
+const navItems = [
+   {name: "home", path: "#home"},
+  {name: "about", path: "#about"},
+  {name: "skills", path: "#skills"},
+  {name: "projects", path: "#projects"},
+  {name: "contact", path: "#contact"}
+]
 const NavBar = () => {
   return (
     <header className="header bg-gradient-to-b from-black from-80% via-transparent to-zinc-900 to-95% z-100 mx-auto">
