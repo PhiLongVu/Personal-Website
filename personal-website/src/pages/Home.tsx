@@ -8,6 +8,7 @@ import ThemeToggler from '@/components/ThemeToggler';
 import HeroSection from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
+import { ProjectsSection } from '@/components/ProjectsSection';
 
 const Home = () => {
   return (<div>
@@ -19,6 +20,7 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <ProjectsSection />
     </main>
 
     </div>
