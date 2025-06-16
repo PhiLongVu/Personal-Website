@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react'
 import { Sun, Moon } from 'lucide-react'
-import { cn } from '../utils/util';
+import { cn } from '@/utils/util';
 
 const ThemeToggler = () => {
     const [isDarkMode, setIsDarkMode] = useState(false)

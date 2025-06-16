@@ -18,8 +18,6 @@ const Contact = () => {
                 <div className="bg-orange-400 rounded-t-lg font-mono flex dark:border-x-2 dark:border-t-2 text-white dark:text-black text-xl top-0 left-0 px-6 py-3" role="button" tabIndex={0} aria-disabled="false" aria-roledescription="draggable" aria-describedby="contact">
                     <div className="flex grow flex-row justify-between">
                         contact
-                        {/* <button class="font-mono flex items-center justify-center text-white text-xl right-0 dark:text-black
-    duration-100 hover:scale-110 active:scale-80 z-10">[x]</button> */}
                         <button>[x]</button>
 
 

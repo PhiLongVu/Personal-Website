@@ -66,7 +66,7 @@ const StarBackground = () => {
         size: Math.random() * 2 + 1,
         x: Math.random() * 100,
         y: 0,
-        delay: Math.random() * 15,
+        delay: 0,
         animationDuration: Math.random() * 3 + 3,
       });
     }

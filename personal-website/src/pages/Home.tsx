@@ -3,12 +3,22 @@ import { NavLink } from 'react-router-dom';
 import './Home.css';
 import HomePageGallery from '@/components/HomePageGallery';
 import HomeBackground from '@/components/HomeBackground';
-import NavBar from '../components/NavBar';
+import NavBar from '@/components/NavBar';
+import ThemeToggler from '@/components/ThemeToggler';
+import HeroSection from '@/components/HeroSection';
+import { AboutSection } from '@/components/AboutSection';
 
 const Home = () => {
   return (<div>
-    <NavBar />
+    <ThemeToggler />
+ 
     <HomeBackground />
+    <NavBar />
+    <main>
+      <HeroSection />
+      <AboutSection />
+    </main>
+
     </div>
   )
 }

@@ -99,9 +99,5 @@ const HomePageGallery = () => {
 
 export default HomePageGallery
 
-// Background image fills parent and scales
 
-
-// {/* Black overlay block */}
-// <div className="absolute top-0 left-0 w-[200px] h-full bg-black" />
 
