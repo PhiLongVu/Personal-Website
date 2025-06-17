@@ -64,26 +64,42 @@
 
 @layer base {
   :root {
+    /* --background: hsl(210, 40%, 98%); */
     --background: 210 40% 98%;
+
+    /* --foreground: hsl(222, 47%, 11%); */
     --foreground: 222 47% 11%;
 
+    /* --card: hsl(0, 0%, 100%); */
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    --primary-sample: hsl(28, 100%, 46%);
+    --primary: 28 100% 46%;
+
+    /* --primary-foreground: hsl(210, 40%, 98%); */
     --primary-foreground: 210 40% 98%;
 
+    /* --border: hsl(214, 32%, 91%); */
     --border: 214 32% 91%;
   }
 
   .dark {
+    --background-sample: hsl(222, 47%, 4%);
     --background: 222 47% 4%;
+
+   --foreground-sample: hsl(213, 31%, 91%);
     --foreground: 213 31% 91%;
 
+   --card-sample: hsl(222, 47%, 8%);
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    --primary-sample: hsl(28, 100%, 46%);
+    --primary: 28 100% 46%;
+
+    --primary-foreground-sample: hsl(213 31% 91%);
     --primary-foreground: 213 31% 91%;
 
+    --border-sample: hsl(217, 33%, 20%);
     --border: 217 33% 20%;
   }
 
