@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import CursorFollower from "@/components/CursorFollower";
+import Random3DImages from "./InfiniteScrollFloatImages";
+import Random3DImagesWithParallax from "./InfiniteScrollFloatImages";
+import InfiniteScrollFloatImages from "./InfiniteScrollFloatImages";
 
 type Star = {
   id: number;
@@ -76,8 +79,8 @@ const StarBackground = () => {
   };
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <CursorFollower />
+    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+      <InfiniteScrollFloatImages />
       {stars.map((star) => (
         <div
           key={star.id}

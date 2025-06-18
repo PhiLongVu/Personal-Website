@@ -47,6 +47,7 @@ const DraggableWindow = ({ title = 'Window', width = 300, height = 200, children
   return (
     <div
       ref={windowRef}
+      className='hover:animate-life-up'
       style={{
         position: 'fixed',
         top: position.y,
