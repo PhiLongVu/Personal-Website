@@ -162,8 +162,8 @@ const CursorFollower = ({ src = "images/spacecat.webp", size = 96 }) => {
         ref={imgRef}
         src={src}
         alt="cursor follower"
-        className="fixed pointer-events-none select-none -translate-x-1/2 -translate-y-1/2 top-0 left-0 z-0"
-        style={{ width: size, height: "auto" }}
+        className="fixed pointer-events-none select-none -translate-x-1/2 -translate-y-1/2 top-0 left-0 z-0 h-auto"
+        style={{ width: size}}
       />
     </>
   );

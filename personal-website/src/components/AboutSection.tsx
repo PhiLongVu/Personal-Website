@@ -10,7 +10,7 @@ export const AboutSection = () => {
     return (
       <div
         className={cn(
-          "absolute left-0 w-full h-16 -z-2 px-2",
+          "absolute left-0 w-full h-16 px-2 -z-1",
           position === "top" ? "top-2 items-start" : "bottom-2 items-end"
         )}
       >
@@ -20,7 +20,7 @@ export const AboutSection = () => {
               key={i}
               src={imageUrls[i % imageUrls.length]}
               alt={`Floating ${i}`}
-              className="w-6 h-6 animate-bobbing"
+              className="w-6 h-6 animate-bobbing z-0"
               style={{
                 animationDelay: `${(i * 0.2).toFixed(2)}s`,
               }}
@@ -36,9 +36,10 @@ export const AboutSection = () => {
       id="about"
       className="py-24 px-4 relative flex items-center justify-center"
     >
-      {/* Background */}
-      <div className="-z-2 w-full h-full bg-card absolute" />
 
+
+      {/* BACKDROP blur layer */}
+      <div className="backdrop -z-2" />
       {/* Top dots (now truly at the top) */}
       {renderFloatingImages(
         ["/images/simple_star.webp", "/images/simple_cat.webp"],
@@ -51,7 +52,7 @@ export const AboutSection = () => {
         "bottom"
       )}
 
-      <div className="container mx-auto max-w-5xl flex flex-col gap-y-12">
+      <div className="container mx-auto max-w-5xl flex flex-col gap-y-12 z-0">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           About <span className="text-primary"> Me</span>
         </h2>
