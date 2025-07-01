@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @custom-variant hover (&:hover);
+@plugin "tailwind-scrollbar";
 
 @theme {
   --color-border: hsl(var(--border));

@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
+import { useState as reactUseState } from "react";
 
 const { Engine, World, Bodies, Constraint } = Matter;
+const CURSOR_IMAGES = [
+  "images/space_dog.webp",
+  "images/space_cat.webp"
+];
 
 interface ParticleType {
   body: Matter.Body;
@@ -41,10 +46,19 @@ function Particle(
   return { body, show };
 }
 
-const CursorFollower = ({ src = "images/spacecat.webp", size = 96 }) => {
+interface CursorFollowerProps {
+  src?: string;
+  size?: number;
+}
+
+const CursorFollower: React.FC<CursorFollowerProps> = ({ src, size = 96 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const imgRef = useRef<HTMLImageElement | null>(null);
   const requestRef = useRef<number>(0);
+  const [currentImage, setCurrentImage] = useState(() => {
+    const randomIndex = Math.floor(Math.random() * CURSOR_IMAGES.length);
+    return CURSOR_IMAGES[randomIndex];
+  });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -152,7 +166,7 @@ const CursorFollower = ({ src = "images/spacecat.webp", size = 96 }) => {
     };
   }, []);
 
-  return (
+return (
     <>
       <canvas
         ref={canvasRef}
@@ -160,10 +174,10 @@ const CursorFollower = ({ src = "images/spacecat.webp", size = 96 }) => {
       />
       <img
         ref={imgRef}
-        src={src}
+        src={src ?? currentImage}
         alt="cursor follower"
         className="fixed pointer-events-none select-none -translate-x-1/2 -translate-y-1/2 top-0 left-0 z-0 h-auto"
-        style={{ width: size}}
+        style={{ width: size }}
       />
     </>
   );
@@ -171,6 +185,9 @@ const CursorFollower = ({ src = "images/spacecat.webp", size = 96 }) => {
 
 export default CursorFollower;
 
+function useState<T>(initializer: () => T): [T, React.Dispatch<React.SetStateAction<T>>] {
+    return reactUseState(initializer);
+}
 function lerp(a: number, b: number, t: number): number {
-  return a + (b - a) * t;
+    return a + (b - a) * t;
 }
